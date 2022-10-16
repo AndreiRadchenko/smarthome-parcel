@@ -1,0 +1,33 @@
+.hero--gallery {
+  height: 180px;
+  display: flex;
+  align-items: center;
+
+  background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+    url(../images/gallery/hero-video-480x180.webp);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+      url(../images/gallery/hero-video-960x360.webp);
+  }
+
+  @media screen and (min-width: 481px) {
+    height: 280px;
+
+    background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+      url(../images/gallery/hero-video-768x280.webp);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+        url(../images/gallery/hero-video-1536x560.webp);
+    }
+  }
+  @media screen and (min-width: 769px) {
+    height: 400px;
+
+    background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+      url(../images/gallery/hero-video-1600x400.webp);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+        url(../images/gallery/hero-video-1600x400.webp);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.logo {
+  @extend .link;
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.03em;
+  padding: 16px 0;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    padding: 14px 0;
+  }
+}
+.logo--footer {
+  color: var(--secondary-text-color);
+  font-size: 22px;
+  padding: 0;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+  }
+}
+.logo__wrap {
+  margin-left: 5px;
+  @media screen and (min-width: $tablet) {
+    margin-left: 10px;
+  }
+  @media screen and (min-width: $desktop) {
+  }
+}
+
+.logo__text--accent {
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  color: var(--secondary-text-color);
+}

@@ -1,14 +1,418 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Розумний дім – комфорт доступний кожному</title>
+    <link rel="icon" href="./images/svg/smart-home.svg" sizes="32x32" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Спочатку нормалізатор -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- Потім ваші стилі -->
+    <!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- -------------- header ----------------- -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__overlay">
+          <div class="container">
+            <a href="" class="logo">
+              <svg class="logo__svg" width="58" height="58">
+                <use
+                  href="./images/svg/icomoon/symbol-defs.svg#icon-smart-home"
+                ></use>
+              </svg>
+              <div class="logo__wrap">
+                <p class="logo__text">розумний</p>
+                <p class="logo__text--accent">дім</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="menu--container" data-menu>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="./index.html" class="menu__link">Головна</a>
+            </li>
+            <li class="menu__item">
+              <a href="./about.html" class="menu__link">Про нас</a>
+            </li>
+            <li class="menu__item">
+              <a href="./services.html" class="menu__link">Послуги</a>
+            </li>
+            <li class="menu__item">
+              <a href="./gallery.html" class="menu__link">Відео</a>
+            </li>
+            <li class="menu__item">
+              <a href="./contacts.html" class="menu__link">Контакти</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="hamburger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg class="hamburger__icon" width="40" height="40">
+            <use
+              class="hamburger__icon-menu"
+              href="./images/svg/icomoon/symbol-defs.svg#icon-hamburger"
+            ></use>
+            <use
+              class="hamburger__icon-close"
+              href="./images/svg/icomoon/symbol-defs.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- -------------- hero ----------------- -->
+      <section class="hero hero--main">
+        <div class="container container--hero-main">
+          <h1 class="hero-title">
+            Проектування і встановлення систем розумного дому
+          </h1>
+          <p class="section-text section-text--white">
+            Home Assistant – розумний дім що за своєю доступністю і можливостями
+            не має конкурентів.
+          </p>
+          <div class="buttons-wrap">
+            <a href="" class="button-link button-link--white"
+              ><span class="button-text button-text--white"
+                >Надіслати запит</span
+              ></a
+            >
+            <a href="" class="button-link"
+              ><span class="button-text">Дізнатися більше</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- -------------- offers ----------------- -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Що ми пропонуємо</h2>
+          <p class="section-text">
+            Послуги з проектування і встановленяя систем розумного дому на базі
+            сервера Home Assistant.
+          </p>
+          <ul class="offers">
+            <li class="offers__item">
+              <h3 class="offers__header">Консультації.</h3>
+              <p class="section-text section-text--white">
+                Онлайн консультації. Виїзд до замовника (Київ, Київська обл.)
+                Демонстрація робочих автоматизацій.
+              </p>
+              <a href="" class="button-link button-link--offers" role="button"
+                >Докладніше</a
+              >
+            </li>
+            <li class="offers__item">
+              <h3 class="offers__header">Проект.</h3>
+              <p class="section-text section-text--white">
+                Проектування, складання специфікації, підбір і замовлення
+                обладнання.
+              </p>
+              <a href="" class="button-link button-link--offers" role="button"
+                >Докладніше</a
+              >
+            </li>
+            <li class="offers__item">
+              <h3 class="offers__header">Інтеграція.</h3>
+              <p class="section-text section-text--white">
+                Встановлення і налаштування приладів розумного дому. Інсталяція
+                серверу, створення автоматизацій і графічного інтерфейсу.
+              </p>
+              <a href="" class="button-link button-link--offers" role="button"
+                >Докладніше</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- -------------- responses ---------------- -->
+      <section class="section section--responses">
+        <div class="container container--responses">
+          <h2 class="section-title section-title--responses">Відгуки</h2>
+          <div class="siema">
+            <div class="response">
+              <img
+                srcset="
+                  ./images/responses/doorbell-480-min.webp 480w,
+                  ./images/responses/doorbell-960-min.webp 960w
+                "
+                sizes="(min-width: 1200px) 600px, (min-width: 768px) 384px, 480px"
+                class="response__photo"
+                src="./images/responses/doorbell-480-min.webp"
+                alt="Дверний дзвінок"
+              />
+              <div class="response__text-wrap">
+                <div class="response__naw-arrows">
+                  <i class="fa-solid fa-chevron-left arrow-backdrop"></i>
+                  <i class="fa-solid fa-chevron-right arrow-backdrop"></i>
+                </div>
+                <div class="backdrop">
+                  <p class="responses-text">
+                    "Найзручніші рішення для мене, реалізовані в нашому
+                    приватному будинку – відкриття хвіртки за допомогою системи
+                    розпізнавання обличчя та вхідних дверей за допомогою NFC
+                    модуля телефону. ”
+                  </p>
+                  <p class="section-text section-text--responses">
+                    Іра Пшенична смт. Велика Димерка
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="response">
+              <img
+                srcset="
+                  ./images/responses/gate-480.webp 480w,
+                  ./images/responses/gate-960.webp 960w
+                "
+                sizes="(min-width: 1200px) 600px, (min-width: 768px) 384px, 480px"
+                class="response__photo"
+                src="./images/responses/gate-480.webp"
+                alt="Ворота"
+              />
+              <div class="response__text-wrap">
+                <div class="response__naw-arrows">
+                  <i class="fa-solid fa-chevron-left arrow-backdrop"></i>
+                  <i class="fa-solid fa-chevron-right arrow-backdrop"></i>
+                </div>
+                <div class="backdrop">
+                  <p class="responses-text">
+                    "Ворота та автоматика, це евріка! Коли приїзджали гості,
+                    завжди бігав та відкривав ворота, це капець. Зараз, без
+                    зусиль, одним натисканням на телефоні, а коли сам за кермом,
+                    то з панелі автівки відкриваю. Дякую хлопці, за роботу!”
+                  </p>
+                  <p class="section-text section-text--responses">
+                    Павло Романченко м. Васильків
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="response">
+              <img
+                srcset="
+                  ./images/responses/garden-480.webp 480w,
+                  ./images/responses/garden-960.webp 960w
+                "
+                sizes="(min-width: 1200px) 600px, (min-width: 768px) 384px, 480px"
+                class="response__photo"
+                src="./images/responses/garden-480.webp"
+                alt="Ворота"
+              />
+              <div class="response__text-wrap">
+                <div class="response__naw-arrows">
+                  <i class="fa-solid fa-chevron-left arrow-backdrop"></i>
+                  <i class="fa-solid fa-chevron-right arrow-backdrop"></i>
+                </div>
+                <div class="backdrop">
+                  <p class="responses-text">
+                    "У кого есть огород, меня поймут. Я про полив. Постоянно
+                    приходилось бегать с лейками, обрывать руки. Не всегда есть
+                    время для полива. Прочитала про капельный полив,про бочку,
+                    которую можно наполнить водой. Но каждый раз бегать и ее
+                    наполнять, как то не радовало меня, легче уж с лейкой, я так
+                    думала. Соседи посоветовали ребят, которые занимались
+                    автоматизацией и также вопросоми полива. Сейчас у меня все
+                    работает само по себе, я только наблюдаю. Вода подаётся в
+                    бак автоматически, есть график полива, когда какую зону
+                    поливать. Спасибо за ваш труд.”
+                  </p>
+                  <p class="section-text section-text--responses">
+                    Виктория Ямковая пгт Калиновка
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -------------- examples ---------------- -->
+      <section class="section section--examples">
+        <div class="container">
+          <h2 class="section-title section-title--examples">
+            Приклад специфікації
+          </h2>
+          <p class="section-text">
+            Специфікація системи “розумний дім” однокімнатної квартири в ЖК
+            “Сирецькі сади”, Київ.
+          </p>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1427UugK_wo20exgCGu2kdjkPVLyH0PwalCbbw0wI3ak/edit#gid=0"
+            class="button-link button-link--examples"
+          >
+            <svg class="button-link__icon-table" width="24" height="24">
+              <use href="./images/svg/icomoon/symbol-defs.svg#icon-table"></use>
+            </svg>
+            Переглянути на Google Docs</a
+          >
+          <a
+            class="image-link"
+            href="https://docs.google.com/spreadsheets/d/1427UugK_wo20exgCGu2kdjkPVLyH0PwalCbbw0wI3ak/edit#gid=0"
+            ><img
+              src="./images/specification/specification-crop.webp"
+              alt="приклад специфікації"
+              class="examples-img"
+          /></a>
+        </div>
+      </section>
+      <!-- -------------- advice ---------------- -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Потрібна порада?</h2>
+          <p class="section-text">
+            Маєте запитання стосовно систем розумного дому? Із задоволенням Вас
+            проконсультуємо.
+          </p>
+          <a href="tel:+380673329751" class="button-link button-link--tel">
+            <svg class="button-link__icon" width="24" height="24">
+              <use href="./images/svg/icomoon/symbol-defs.svg#icon-phone"></use>
+            </svg>
+            Телефонуйте</a
+          >
+          <ul class="social">
+            <li class="social__item">
+              <a
+                href="viber://chat?number=%2B380673329751"
+                target="_blank"
+                class="social__link"
+              >
+                <svg
+                  class="social__icon social__icon--viber"
+                  width="40"
+                  height="40"
+                >
+                  <use
+                    href="./images/svg/icomoon/symbol-defs.svg#icon-viber"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="https://t.me/AndreiRadchenko"
+                target="_blank"
+                class="social__link"
+              >
+                <svg
+                  class="social__icon social__icon--telegram"
+                  width="40"
+                  height="40"
+                >
+                  <use
+                    href="./images/svg/icomoon/symbol-defs.svg#icon-telegram"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="https://wa.me/380673329751"
+                target="_blank"
+                class="social__link"
+              >
+                <svg
+                  class="social__icon social__icon--whatsapp"
+                  width="40"
+                  height="40"
+                >
+                  <use
+                    href="./images/svg/icomoon/symbol-defs.svg#icon-whatsapp"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="http://m.me/smart.home.kyiv"
+                target="_blank"
+                class="social__link"
+              >
+                <svg
+                  class="social__icon social__icon--messenger"
+                  width="40"
+                  height="40"
+                >
+                  <use
+                    href="./images/svg/icomoon/symbol-defs.svg#icon-messenger"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- -------------- footer ----------------- -->
+    <footer class="section footer">
+      <div class="container footer__container">
+        <div class="footer__moto">
+          <a href="" class="logo logo--footer">
+            <svg class="logo__svg" width="58" height="58">
+              <use
+                href="./images/svg/icomoon/symbol-defs.svg#icon-smart-home"
+              ></use>
+            </svg>
+            <div class="logo__wrap">
+              <p class="logo__text">розумний</p>
+              <p class="logo__text--accent">дім</p>
+            </div>
+          </a>
+          <h3 class="moto">комфорт доступний кожному</h3>
+          <!-- <h2 class="moto">приєднуйтесь до нас у спільнотах</h2> -->
+          <div class="media">
+            <h3 class="media__title">приєднуйтесь до нас у спільнотах</h3>
+            <div class="media__group">
+              <a
+                href="https://www.youtube.com/channel/UC7uVr9GRvSpF-9ihH9fwv8A/videos"
+                target="_blank"
+              >
+                <svg class="youtube" width="50" height="50">
+                  <use
+                    href="./images/svg/icomoon/symbol-defs.svg#icon-youtube"
+                  ></use>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/smart.home.kyiv/">
+                <svg class="facebook" width="55" height="55">
+                  <use
+                    href="./images/svg/icomoon/symbol-defs.svg#icon-facebook"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector('.header')
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
+    <script src="./js/menu.js" type="module"></script>
+    <script src="./js/siema.min.js"></script>
+    <script src="./js/mySiema.js" type="module"></script>
   </body>
 </html>

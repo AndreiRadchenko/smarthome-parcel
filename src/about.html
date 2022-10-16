@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Розумний дім – комфорт доступний кожному</title>
+    <link rel="icon" href="./images/svg/smart-home.svg" sizes="32x32" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Спочатку нормалізатор -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- Потім ваші стилі -->
+    <!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+  <body>
+    <!-- -------------- header ----------------- -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__overlay">
+          <div class="container">
+            <a href="" class="logo">
+              <svg class="logo__svg" width="58" height="58">
+                <use
+                  href="./images/svg/icomoon/symbol-defs.svg#icon-smart-home"
+                ></use>
+              </svg>
+              <div class="logo__wrap">
+                <p class="logo__text">розумний</p>
+                <p class="logo__text--accent">дім</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="menu--container" data-menu>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="./index.html" class="menu__link">Головна</a>
+            </li>
+            <li class="menu__item">
+              <a href="./about.html" class="menu__link">Про нас</a>
+            </li>
+            <li class="menu__item">
+              <a href="./services.html" class="menu__link">Послуги</a>
+            </li>
+            <li class="menu__item">
+              <a href="./gallery.html" class="menu__link">Відео</a>
+            </li>
+            <li class="menu__item">
+              <a href="./contacts.html" class="menu__link">Контакти</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="hamburger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg class="hamburger__icon" width="40" height="40">
+            <use
+              class="hamburger__icon-menu"
+              href="./images/svg/icomoon/symbol-defs.svg#icon-hamburger"
+            ></use>
+            <use
+              class="hamburger__icon-close"
+              href="./images/svg/icomoon/symbol-defs.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- -------------- hero ----------------- -->
+      <section class="hero hero--about">
+        <div class="container hero-container">
+          <h2 class="hero-title">Хто ми</h2>
+        </div>
+      </section>
+      <!-- -------------- team ----------------- -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Компанія ентузіастів розумного дому</h2>
+          <p class="section-text section-text--team">
+            Ми – команда однодумців, що одного разу познайомившись з поняттям
+            “розумний дім” на практиці, вже не уявляємо життя інакше. Кожен з
+            нас створив свій власний світ інтернету речей, жити в якому стало
+            приємніше, простіше, легше та цікавіше. Дослідивши різні варіанти
+            систем розумного дому, ми обрали Home Assistant – автоматизацію з
+            відкритим кодом, яка на перше місце ставить локальний контроль та
+            конфіденційність. І разом з тим, дозволяє поєднувати в одній системі
+            датчики і прилади майже всіх провідних брендів інтернету речей. В
+            наших роботах є розумне освітлення, розумні штори, відкатні і
+            ролетні ворота, автополив і т. д. Зараз ми хочемо допомогти і іншим
+            ентузіастам створити свій Розумний дім, чи доповнити і розширити
+            можливості Вашого розумного дому.
+          </p>
+        </div>
+      </section>
+      <section class="section section--team">
+        <div class="container">
+          <h2 class="section-title">Наша команда</h2>
+          <ul class="team">
+            <li class="team__item" data-card-active="inactive">
+              <img
+                srcset="
+                  ./images/about/team/andrii/Andrii-83x190.jpg   83w,
+                  ./images/about/team/andrii/Andrii-163x380.jpg 163w,
+                  ./images/about/team/andrii/Andrii-112x256.jpg 112w,
+                  ./images/about/team/andrii/Andrii-224x512.jpg 224w
+                "
+                sizes=" (min-width: 768px) 112px, 83px"
+                class="team__photo"
+                src="./images/about/team/andrii/Andrii-83x190.jpg"
+                alt="Радченко Андрій"
+              />
+              <article class="teamate__review">
+                <h3 class="teamate__name">Андрій Радченко</h3>
+                <h4 class="teamate__position">інженер</h4>
+                <p class="teamate__description">
+                  Інтернетом речей і створенням “Розумного дому” займаюсь з 2018
+                  року
+                </p>
+                <div class="team__social"></div>
+              </article>
+              <button
+                title="Social Networks"
+                class="team__card-button"
+              ></button>
+              <div class="team__social">
+                <a href="" class="team__social-link"></a>
+                <a href="" class="team__social-link"></a>
+                <a href="" class="team__social-link"></a>
+                <a href="" class="team__social-link"></a>
+              </div>
+            </li>
+            <li class="team__item" data-card-active="inactive">
+              <img
+                srcset="
+                  ./images/about/team/dima/Dima-83x190.jpg   83w,
+                  ./images/about/team/dima/Dima-163x380.jpg 163w,
+                  ./images/about/team/dima/Dima-112x256.jpg 112w,
+                  ./images/about/team/dima/Dima-224x512.jpg 224w
+                "
+                sizes=" (min-width: 768px) 112px, 83px"
+                class="team__photo"
+                src="./images/about/team/dima/Dima-83x190.jpg"
+                alt="Дмитро Лакшинський"
+              />
+              <article class="teamate__review">
+                <h3 class="teamate__name">Дмитро Лакшинський</h3>
+                <h4 class="teamate__position">інженер</h4>
+                <p class="teamate__description">
+                  Інтернетом речей і створенням “Розумного дому” займаюсь з 2018
+                  року
+                </p>
+                <div class="team__social"></div>
+              </article>
+              <button
+                title="Social Networks"
+                class="team__card-button"
+              ></button>
+              <div class="team__social">
+                <a href="" class="team__social-link"></a>
+                <a href="" class="team__social-link"></a>
+                <a href="" class="team__social-link"></a>
+                <a href="" class="team__social-link"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- -------------- technology ----------------- -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Що ми можемо зробити для Вас?</h2>
+          <p class="section-text">
+            Ми можемо зробити Вашу оселю сучасною і ще більш зручною. Ціни на
+            обладнання і послуги задовольнять будь-який бюджет.
+          </p>
+          <ul class="technology">
+            <li class="technology__item">
+              <h3 class="technology__title">Автоматизація освітлення</h3>
+              <div class="technology__description">
+                <p>
+                  Автоматизація освітлення активується в темну пору доби. Світло
+                  вмикається коли Ви відчиняєте двері чи заходите в приміщення.
+                  Через 10 хвилин після того як ви вийшли, світло вимкнеться.
+                  Подібні автоматизації працюють в коридорі, в ванній кімнаті та
+                  на кухні. Вам буквально не потрібно буде користуватися
+                  вимикачами. На смартфоні Ви бачитимете де у Вашому домі
+                  увімкнене освітлення і завжди, навіть не будучи вдома, зможете
+                  ним керувати. За бажанням, з настанням ночі, яскравіть і
+                  температура освітлення змінюватимуться від холодного яскравого
+                  до теплого тьмяного.
+                </p>
+              </div>
+            </li>
+            <li class="technology__item">
+              <h3 class="technology__title">Опалення та кондиціонування</h3>
+              <div class="technology__description">
+                <p>
+                  З системою розумного дому Ви налаштуєте найбільш комфортний та
+                  ощадливий режим опалення оселі. Віддалено контролюватимете
+                  температуру в кімнатах, отримуватимете попередження, коли
+                  через відкрите вікно стане занадто прохолодно. Зможете
+                  встановити розклад обігріву чи кондиціонування дому або
+                  індивідуальний розклад для кожної кімнати. Змінюватимете цей
+                  розклад в смартфоні, не важливо вдома ви чи ні. Все це можливо
+                  і з централізованими і з індивідуальними системами опалення.
+                </p>
+                <p>
+                  За допомогою смартфону, зможете увімкнути домашній кондиціонер
+                  виїжджаючи з роботи, і увійти в оселю з комфортною
+                  температурою.
+                </p>
+              </div>
+            </li>
+            <li class="technology__item">
+              <h3 class="technology__title">Автоматичні штори та ролети</h3>
+              <div class="technology__description">
+                Ми можемо автоматизувати штори чи ролети якими декоровано вікна
+                у Вашому домі. Вони будуть відкриватись і закриватись за
+                індивідуальним разкладом, щоб зробити кімнату максимально
+                світлою, чи навпаки прикрити від надто надокучливого сонця вдень
+                і допитливих сусідів увечері. Для більшої універсальності,
+                ролети чи штори можна доповнити пультами керування. Звичайно,
+                керувати шторами/ролетами і встановлювати розклад можна в
+                смартфоні.
+              </div>
+            </li>
+            <li class="technology__item">
+              <h3 class="technology__title">Відеоспостереження</h3>
+              <div class="technology__description">
+                <p>
+                  Ми надамо Вам можливість візуального контролю Вашої оселі в
+                  реальному часі. Камера розумного дзвінка на дверях розпізнає
+                  обличчя членів Вашої родини, та надішле вам виклик з
+                  фотографією відвідувача на телефон. В режимі охорони, система
+                  мережевого відео запису зафіксує відео з камер при виявленні
+                  руху, та надішле повідомлення Вам та службі охорони.
+                </p>
+              </div>
+            </li>
+            <li class="technology__item">
+              <h3 class="technology__title">Системи запобігання аваріям</h3>
+              <div class="technology__description">
+                <p>
+                  Допоможемо запобігти затопленню у наслідок протікання чи
+                  поривів сантехнічного обладнання. Для цього встановимо у Вашій
+                  оселі датчики витоку води, та приводи для перекриття ввідних
+                  кранів. При виявленні витоку води система автоматично перекриє
+                  ввідний кран та сповістить Вас по телефону.
+                </p>
+                <p>
+                  Аналогічно діє система виявлення витоку газу. Автоматичний
+                  привід прекриє подачу газу в дім, при виявленні датчиком газу
+                  витоку і надішле Вам сповіщення.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- -------------- homeassistant ----------------- -->
+      <section class="section">
+        <div class="container">
+          <article class="homeassistant">
+            <div class="homeassistant__text">
+              <p>
+                <a
+                  href="https://www.home-assistant.io/"
+                  class="homeassistant__link"
+                  >Home Assistant</a
+                >
+                – це сервер домашньої автоматизації з відкритим кодом, що на
+                перше місце ставить локальний контроль та конфіденційність.
+                Розробляється всесвітньою спільнотою майстрів, та ентузіастів
+                розумного дому. Ідеально підходить для роботи на Raspberry Pi
+                або локальному сервері.
+              </p>
+            </div>
+            <!-- <img src="" alt="пристрої розумного дому" class="homeassistant__img" /> -->
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- -------------- footer ----------------- -->
+    <footer></footer>
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector('.header')
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/card-button.js" type="module"></script>
+  </body>
+</html>

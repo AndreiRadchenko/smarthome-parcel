@@ -1,2 +1,31 @@
-@import './common';
-@import './example';
+// import utils
+
+@import './utils/variables';
+// @import './utils/visually-hiden';
+@import './utils/mixins';
+
+// import base style
+
+@import './base/common';
+
+// import components
+
+@import './components/buttons';
+@import './components/logo';
+@import './components/social';
+// @import './components/subscribe-form';
+// @import './components/modal-form';
+
+//  import layouts
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/offers';
+@import './layouts/responses';
+@import './layouts/examples';
+@import './layouts/about';
+@import './layouts/team';
+@import './layouts/services';
+@import './layouts/gallery';
+@import './layouts/footer';
+@import './layouts/contacts';

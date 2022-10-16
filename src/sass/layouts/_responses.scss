@@ -1,0 +1,107 @@
+.section--responses {
+  // position: relative;
+
+  // max-width: 480px;
+  // height: 118vw;
+  min-height: 470px;
+  margin: 0 auto;
+}
+.response {
+  position: relative;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: stretch;
+  }
+}
+.container--responses {
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.response__text-wrap {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: linear-gradient(180deg, rgba(7, 90, 174, 0.7) 5%, rgba(7, 90, 174, 0.9));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
+  & > .backdrop {
+    // backdrop-filter: blur(2px);
+    padding: 10px 15px 20px;
+    @media screen and (min-width: $tablet) {
+      padding-right: 40px;
+    }
+  }
+}
+.response__naw-arrows {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: 200;
+  color: var(--secondary-text-color);
+  // padding-left: 5px;
+  // padding-right: 5px;
+  padding: 5px;
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: ($tablet - 35px);
+  }
+  @media screen and (min-width: $desktop) {
+    width: ($desktop - 35px);
+  }
+}
+.arrow-backdrop {
+  // background-color: gray;
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 5%;
+  line-height: 1.5;
+  width: 1.1em;
+  background-color: var(--);
+  text-align: center;
+  // transform: scale(1);
+  translate: background-color 250ms var(--timing-function);
+  &:hover {
+    // transform: scale(1.1);
+    background-color: var(--primary-btn-hover-color);
+  }
+}
+.section-title--responses {
+  color: var(--main-text-color);
+  text-align: left;
+  margin-bottom: 40px;
+}
+.responses-text {
+  font-size: 16px;
+  line-height: calc(25 / 16);
+  color: var(--secondary-text-color);
+}
+.section-text--responses {
+  position: relative;
+  color: var(--secondary-text-color);
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 12.7px;
+  line-height: 1;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: var(--offers-decorate-line);
+  }
+}

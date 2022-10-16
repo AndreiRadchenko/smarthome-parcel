@@ -1,0 +1,287 @@
+.hero--about {
+  height: 180px;
+  display: flex;
+  align-items: center;
+
+  background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+    url(../images/about/hero-about/hero-about-480x180.webp);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+      url(../images/about/hero-about/hero-about-960x360.webp);
+  }
+
+  @media screen and (min-width: 481px) {
+    height: 280px;
+
+    background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+      url(../images/about/hero-about/hero-about-768x280.webp);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+        url(../images/about/hero-about/hero-about-1536x560.webp);
+    }
+  }
+  @media screen and (min-width: 769px) {
+    height: 400px;
+
+    background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+      url(../images/about/hero-about/hero-about-1600x400.webp);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(270deg, rgba(7, 90, 174, 0) 0%, #075aae 100%),
+        url(../images/about/hero-about/hero-about-3200x800.webp);
+    }
+  }
+}
+
+// ============================== team =====================================================
+.section-text--team {
+  margin: 0;
+}
+.section--team {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background-color: var(--section-background-color);
+}
+.team {
+  @extend .list;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 50px;
+  }
+}
+.team__item {
+  position: relative;
+  display: flex;
+  background-color: var(--background-color);
+  z-index: 1;
+  // width: calc(100vw - 62px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  // =============== change card button icon ====================================
+  &[data-card-active='inactive'] > .team__card-button::before {
+    content: '\f142'; //three dots
+    transform: rotate(0);
+  }
+  &[data-card-active='active'] > .team__card-button::before {
+    content: '\f00d'; //cross
+    transform: rotate(-90deg);
+  }
+  // ============== move blue background ========================================
+  &[data-card-active='inactive']::after {
+    opacity: 0.6;
+    transform: translate3d(10px, 10px, 0);
+  }
+  &[data-card-active='active']::after {
+    opacity: 1;
+    transform: translate3d(16px, 40px, 0);
+  }
+  // ============= hide social container =======================================
+  &[data-card-active='active'] > .team__social {
+    height: 40px;
+    visibility: visible;
+  }
+  &[data-card-active='inactive'] > .team__social {
+    height: 0px;
+    visibility: hidden;
+  }
+  // ============ animate social icon ==========================================
+  &[data-card-active='active'] > .team__social > .team__social-link:nth-child(1) {
+    animation: socialAnimation 150ms linear 650ms 1 normal forwards running;
+  }
+  &[data-card-active='inactive'] > .team__social > .team__social-link:nth-child(1) {
+    transform: scale(0);
+  }
+  &[data-card-active='active'] > .team__social > .team__social-link:nth-child(2) {
+    animation: socialAnimation 150ms linear 500ms 1 normal forwards running;
+  }
+  &[data-card-active='inactive'] > .team__social > .team__social-link:nth-child(2) {
+    transform: scale(0);
+  }
+  &[data-card-active='active'] > .team__social > .team__social-link:nth-child(3) {
+    animation: socialAnimation 150ms linear 350ms 1 normal forwards running;
+  }
+  &[data-card-active='inactive'] > .team__social > .team__social-link:nth-child(3) {
+    transform: scale(0);
+  }
+  &[data-card-active='active'] > .team__social > .team__social-link:nth-child(4) {
+    animation: socialAnimation 150ms linear 200ms 1 normal forwards running;
+  }
+  &[data-card-active='inactive'] > .team__social > .team__social-link:nth-child(4) {
+    transform: scale(0);
+  }
+
+  &::after {
+    background-color: var(--button-hover-color);
+    content: '';
+    display: block;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    transform: translate3d(10px, 10px, 0);
+    transition: transform 0.15s linear, opacity 0.15s linear;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: $telephone) {
+    width: calc(100vw - 62px);
+  }
+  @media screen and (min-width: $telephone) {
+    width: calc(#{$telephone} - 48px);
+  }
+  @media screen and (max-width: ($tablet - 1px)) {
+    & + & {
+      margin-top: 60px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+  }
+  @media screen and (min-width: 1024px) {
+    // ============== move blue background ========================================
+    &:hover::after {
+      opacity: 1;
+      transform: translate3d(16px, 40px, 0);
+    }
+    // ============= hide social container =======================================
+    &:hover > .team__social {
+      height: 40px;
+      visibility: visible;
+    }
+    // ============ animate social icon ==========================================
+    &:hover > .team__social > .team__social-link:nth-child(1) {
+      animation: socialAnimation 150ms linear 650ms 1 normal forwards running;
+    }
+    &:hover > .team__social > .team__social-link:nth-child(2) {
+      animation: socialAnimation 150ms linear 500ms 1 normal forwards running;
+    }
+    &:hover > .team__social > .team__social-link:nth-child(3) {
+      animation: socialAnimation 150ms linear 350ms 1 normal forwards running;
+    }
+    &:hover > .team__social > .team__social-link:nth-child(4) {
+      animation: socialAnimation 150ms linear 200ms 1 normal forwards running;
+    }
+  }
+}
+
+.team__photo {
+  width: 83px;
+  @media screen and (min-width: $tablet) {
+    width: 112px;
+  }
+}
+.teamate__review {
+  padding: 12px;
+  // z-index: 1;
+  background-color: var(--background-color);
+}
+.teamate__name {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    max-width: 180px;
+  }
+}
+.teamate__position {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.teamate__description {
+}
+.team__card-button {
+  font: var(--fa-font-solid);
+  text-rendering: auto;
+  touch-action: none;
+  background-color: transparent;
+  border-radius: 50%;
+  display: none;
+  height: 32px;
+  line-height: 32px;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  top: 0.15em;
+  transition: background-color 0.2s linear;
+  width: 32px;
+  border: none;
+  outline: none;
+  &::before {
+    // font-family: 'Font Awesome 6 Free';
+    transition: transform 0.2s linear;
+    color: rgba(66, 66, 66, 0.87);
+    display: block;
+    font-size: 18px;
+    margin: auto;
+    transform: rotate(0);
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--card-button-hover);
+  }
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.team__social {
+  position: absolute;
+  bottom: -40px;
+  right: -16px;
+  text-align: right;
+  letter-spacing: 0px;
+  font-size: 16px;
+  display: flex;
+}
+.team__social-link {
+  // font: var(--fa-brand);
+  font-family: 'Font Awesome 6 Brands';
+  text-rendering: auto;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 24px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-size-adjust: 100%;
+  width: 52px;
+  letter-spacing: 0;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  // border-radius: 50%;
+  transform: scale(0);
+  &:hover::before {
+    transform: scale3d(1, 1, 1);
+  }
+  &::before {
+    background-color: #ffd740;
+    bottom: 0;
+    content: '';
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.15s linear;
+    width: 100%;
+  }
+  &:nth-child(1)::after {
+    content: '\f409'; //viber
+  }
+  &:nth-child(2)::after {
+    content: '\f2c6'; //telegram
+  }
+  &:nth-child(3)::after {
+    content: '\f232'; //whatsap
+  }
+  &:nth-child(4)::after {
+    content: '\f39f'; //messenger
+  }
+  &:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

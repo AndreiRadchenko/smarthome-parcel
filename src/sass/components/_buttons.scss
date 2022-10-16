@@ -1,0 +1,26 @@
+.button-link {
+  @extend .link;
+  padding: 15px 10px;
+  min-width: 160px;
+  min-height: 50px;
+  background-color: var(--background-blue);
+
+  color: var(--secondary-text-color);
+  text-align: center;
+
+  @include customTransition(color, background-color, box-shadow);
+
+  & + & {
+    margin-left: 10px;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover-color);
+    color: var(--secondary-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+.button-link--white {
+  background-color: var(--secondary-text-color);
+  color: var(--primary-text-color);
+}
