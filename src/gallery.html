@@ -92,6 +92,8 @@
         <div class="container">
           <h2 class="section-title">Приклади автоматизацій</h2>
           <p class="section-text">Реалізовані нами ідеї розумного дому</p>
+
+          <!-- ================= Gallery ============================== -->
           <ul class="gallery">
             <li class="gallery__item">
               <iframe
@@ -106,18 +108,15 @@
               <div class="gallery__text-wrap">
                 <h3 class="gallery__title">Розумний дім. Кухня</h3>
                 <p class="gallery__text">
-                  Мова піде про реалізовані мною на кухні ідеї розумного дому.
-                  Зокрема сценарії використання голосового асистента amazon
-                  alexa, датчиків полум'я і запаху, автоматизованого освітлення
-                  і ролети вікна на кухні.
+                  Голосовий асистент, датчики полум'я і запаху, автоматизоване
+                  освітлення і ролети вікна на кухні.
                 </p>
               </div>
             </li>
             <li class="gallery__item">
               <iframe
+                class="gallery__iframe"
                 lang="en"
-                width="100%"
-                height="200vh"
                 src="https://www.youtube.com/embed/-rZHH1ycZOo"
                 title="Smart Home. Bathroom"
                 frameborder="0"
@@ -127,16 +126,15 @@
               <div class="gallery__text-wrap">
                 <h3 class="gallery__title">Розумний дім. Ванна кімната</h3>
                 <p class="gallery__text">
-                  В цьому відео я розповідаю про свій вибір системи розумного
-                  дому і про автоматизації що працюють в моїй ванній кімнаті.
+                  Вибір системи розумного дому і автоматизації що працюють в
+                  ванній кімнаті.
                 </p>
               </div>
             </li>
             <li class="gallery__item">
               <iframe
+                class="gallery__iframe"
                 lang="en"
-                width="100%"
-                height="200vh"
                 src="https://www.youtube.com/embed/agCnqtNheHk"
                 title="Smart home light"
                 frameborder="0"
@@ -151,32 +149,26 @@
               </div>
             </li>
             <li class="gallery__item">
-              <iframe
+              <a
+                class="gallery__iframe"
                 lang="en"
-                width="100%"
-                height="200vh"
-                src="https://www.youtube.com/embed/wM-7JIHAqIQ"
+                href="https://www.youtube.com/embed/wM-7JIHAqIQ"
                 title="Home light automation with door sensors"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+                data-padding-bottom="56.25%"
+                >YouTube</a
+              >
               <div class="gallery__text-wrap">
                 <h3 class="gallery__title">Автоматизація освітлення</h3>
                 <p class="gallery__text">
                   Приклади використання датчиків відкриття дверей для
-                  автоматизації освітлення будинку. Також продемонстрована
-                  можливість керування мережево-доступними світловими приладами
-                  (connected things) за допомогою багатофункціональних сенсорних
-                  і бездротових вимикачів.
+                  автоматизації освітлення будинку.
                 </p>
               </div>
             </li>
             <li class="gallery__item">
               <iframe
+                class="gallery__iframe"
                 lang="en"
-                width="100%"
-                height="200vh"
                 src="https://www.youtube.com/embed/LVS-DfC3EMw"
                 title="DIY doorbell with face recognition"
                 frameborder="0"
@@ -187,17 +179,13 @@
                 <h3 class="gallery__title">
                   Дверний дзвінок з розпізнаванням облич
                 </h3>
-                <p class="gallery__text">
-                  Дверний дзвінок з розпінаванням облич, що працює сумісно з
-                  розумною колонкою Amazon Echo Show 5
-                </p>
+                <p class="gallery__text">Дзвінок працює сумісно з Echo Show</p>
               </div>
             </li>
             <li class="gallery__item">
               <iframe
+                class="gallery__iframe"
                 lang="en"
-                width="100%"
-                height="200vh"
                 src="https://www.youtube.com/embed/-kzQXVCUmVY"
                 title="DIY automatic gate with google assistant"
                 frameborder="0"
@@ -226,5 +214,6 @@
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
     <script src="./js/menu.js"></script>
+    <script src="./js/gallery.js" type="module"></script>
   </body>
 </html>
