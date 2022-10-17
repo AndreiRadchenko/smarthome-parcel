@@ -1,9 +1,11 @@
 {{#each this}}
   <li class='gallery__item'>
-    <img src={{preview}} title={{title}} />
+    <div class='img-wrap'>
+      <img class='gallery__iframe' src='{{preview}}' alt='{{title}}' />
+    </div>
     <div class='gallery__text-wrap'>
-      <h3 class='gallery__title'>{{galleryTitle}}</h3>
-      <p class='gallery__text'>{{galleryText}}
+      <h3 class='gallery__title'>"{{galleryTitle}}"</h3>
+      <p class='gallery__text'>"{{galleryText}}"
       </p>
     </div>
   </li>

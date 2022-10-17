@@ -1,18 +1,21 @@
-// import IframeLightbox from 'iframe-lightbox';
+import galleryTemplate from '../templates/gallery-item.hbs';
+import { galleryItems } from './gallery-items';
 
-const iframesRef = document.querySelectorAll('.gallery__iframe');
+const galleryRef = document.querySelector('.gallery');
 
-// iframesRef.forEach(element => {
-//   element.lightbox = new IframeLightbox(element);
+console.log(galleryRef);
+console.log(galleryItems);
+console.log(galleryTemplate(galleryItems));
+
+galleryRef.insertAdjacentHTML('beforeend', galleryTemplate(galleryItems));
+
+// import SimpleLightbox from 'simplelightbox';
+
+// // Додатковий імпорт стилів
+// import 'simplelightbox/dist/simple-lightbox.min.css';
+
+// const lightbox = new SimpleLightbox('.gallery a', {
+//   captionsData: 'alt',
+//   captionDelay: 250,
+//   captionClass: 'custom-caption',
 // });
-
-import SimpleLightbox from 'simplelightbox';
-
-// Додатковий імпорт стилів
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
-const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 250,
-  captionClass: 'custom-caption',
-});
