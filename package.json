@@ -20,6 +20,7 @@
   "dependencies": {
     "iframe-lightbox": "^0.2.11",
     "modern-normalize": "^1.1.0",
+    "parcel-reporter-static-files-copy": "^1.4.0",
     "parcel-transformer-hbs": "^1.0.4",
     "simplelightbox": "^2.10.4"
   },
@@ -28,7 +29,6 @@
     "parcel": "^2.6.0",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "parcel-reporter-static-files-copy": "file:../../",
     "posthtml-include": "^1.7.4"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
