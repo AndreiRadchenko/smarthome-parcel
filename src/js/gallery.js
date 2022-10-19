@@ -19,6 +19,10 @@ function onGalleryClick(event) {
 
 function onGalleryModalClose(event) {
   stopYouTubeVideos();
+  // refs.modalIframe.contentWindow.postMessage(
+  //   JSON.stringify({ event: 'command', func: 'stopVideo' }),
+  //   '*'
+  // );
   refs.galleryBackdrop.classList.toggle('is-hidden');
   document.body.classList.toggle('modal-open');
   document.removeEventListener('keydown', onEscapeKeyDown);
