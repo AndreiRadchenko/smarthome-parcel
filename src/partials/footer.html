@@ -1,41 +1,5 @@
 <footer class="section footer">
   <div class="container footer__container">
-    <!-- <div class="footer__moto">
-      <a href="" class="logo logo--footer">
-        <svg class="logo__svg" width="58" height="58">
-          <use
-            href="./images/svg/icomoon/symbol-defs.svg#icon-smart-home"
-          ></use>
-        </svg>
-        <div class="logo__wrap">
-          <p class="logo__text">розумний</p>
-          <p class="logo__text--accent">дім</p>
-        </div>
-      </a>
-      <h3 class="moto">комфорт доступний кожному</h3>
-      <div class="media">
-        <h3 class="media__title">приєднуйтесь до нас у спільнотах</h3>
-        <div class="media__group">
-          <a
-            href="https://www.youtube.com/channel/UC7uVr9GRvSpF-9ihH9fwv8A/videos"
-            target="_blank"
-          >
-            <svg class="youtube" width="50" height="50">
-              <use
-                href="./images/svg/icomoon/symbol-defs.svg#icon-youtube"
-              ></use>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/smart.home.kyiv/">
-            <svg class="facebook" width="55" height="55">
-              <use
-                href="./images/svg/icomoon/symbol-defs.svg#icon-facebook"
-              ></use>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div> -->
     <div class="footer-touch-form-wrap">
       <div class="footer-touch footer-section">
         <div class="footer-contacts">
@@ -43,6 +7,15 @@
           <p class="section-text section-text-footer">
             Зв'яжіться з нами в зручний спосіб
           </p>
+          <a
+            href="tel:+380673329751"
+            class="button-link button-link--tel button-link--footer"
+          >
+            <svg class="button-link__icon" width="24" height="24">
+              <use href="./images/svg/icomoon/symbol-defs.svg#icon-phone"></use>
+            </svg>
+            Телефонуйте</a
+          >
           <div class="footer__social">
             <a href="" class="footer__social-link"></a>
             <a href="" class="footer__social-link"></a>
@@ -50,11 +23,86 @@
             <a href="" class="footer__social-link"></a>
           </div>
         </div>
-        <div class="footer-media"></div>
+        <div class="footer-media">
+          <p class="section-text section-text-footer">
+            Ми у соціальних спільнотах
+          </p>
+          <div class="footer-media__wrap">
+            <a href="" class="footer-media__link"
+              ><i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="" class="footer-media__link">
+              <i class="fa-brands fa-square-youtube"></i>
+            </a>
+          </div>
+        </div>
       </div>
+      <!------------------------- FORM  ------------------------------------------------>
 
-      <div class="footer-form footer-section"></div>
+      <div class="footer-form footer-section">
+        <h2 class="section-title section-title-footer">Зворотній зв'язок</h2>
+        <p class="section-text section-text-footer">
+          Надішліть запит, ми запропонуємо рішення!
+        </p>
+        <form action="javascript:void(0);" class="footer-form">
+          <input
+            type="text"
+            class="form-input"
+            maxlength="256"
+            name="formt-name"
+            data-name="form name"
+            placeholder="name"
+            id="form-name"
+            required=""
+          />
+          <input
+            type="text"
+            class="form-input"
+            maxlength="256"
+            name="formt-email"
+            data-name="form email"
+            placeholder="email address"
+            id="form-email"
+            required=""
+          />
+          <div class="form-input__textarea">
+            <textarea
+              class="modal-form__comment"
+              name="modal-comment"
+              id="modal-comment"
+              cols="30"
+              rows="10"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+          <button
+            class="button-link button-link--tel button-link--footer"
+            type="submit"
+          >
+            Надіслати
+          </button>
+        </form>
+      </div>
     </div>
-    <div class="footer-tally footer-section"></div>
+    <div class="footer-tally footer-section">
+      <p class="section-text section-text-footer tally-text">
+        Ми – команда однодумців, що одного разу познайомившись з поняттям
+        “розумний дім” на практиці, вже не уявляємо життя інакше. Кожен з нас
+        створив свій власний світ інтернету речей, жити в якому стало приємніше,
+        простіше, легше та цікавіше. В наших роботах є розумне освітлення,
+        розумні штори, відкатні і ролетні ворота, автополив і т. д. Зараз ми
+        хочемо допомогти і іншим ентузіастам створити свій Розумний дім, чи
+        доповнити і розширити можливості Вашого розумного дому.
+      </p>
+      <p class="section-text section-text-footer tally-text">
+        Website by
+        <a
+          class="small-link"
+          href="#https://github.com/AndreiRadchenko"
+          target="_blank"
+          >Andrii Radchenko</a
+        >
+      </p>
+    </div>
   </div>
 </footer>
