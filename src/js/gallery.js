@@ -1,6 +1,6 @@
 import galleryTemplate from '../templates/gallery-item.hbs';
 import { galleryItems } from './gallery-items';
-import refs from './doc-refs.js';
+import { refs } from './doc-refs.js';
 import { spinerPlay, spinerStop } from './spinner';
 
 const VIDEO_STUB = 'images/gallery/preview/toilet-480.webp';

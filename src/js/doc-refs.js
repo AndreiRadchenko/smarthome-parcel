@@ -1,4 +1,4 @@
-export default refs = {
+export const refs = {
   gallery: document.querySelector('.gallery'),
   galleryModal: document.querySelector('.modal'),
   galleryModalCloseBtn: document.querySelector('[data-modal-close-btn]'),

@@ -1,4 +1,4 @@
-import refs from './doc-refs.js';
+import { refs } from './doc-refs.js';
 import { Spinner } from 'spin.js';
 const opts = {
   lines: 20, // The number of lines to draw
