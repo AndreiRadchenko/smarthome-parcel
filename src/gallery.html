@@ -95,6 +95,31 @@
           <ul class="gallery" id="gallery"></ul>
         </div>
       </section>
+      <!----------------- modal-iframe -------------->
+      <div class="backdrop is-hidden" data-about-modal>
+        <div class="modal">
+          <button
+            type="button"
+            class="modal__close-btn"
+            id="close_vid"
+            data-about-modal-close
+          >
+            <i class="fa-solid fa-xmark" data-modal-close-btn></i>
+          </button>
+          <iframe
+            class="modal__iframe"
+            src="images/gallery/preview/toilet-480.webp"
+            title="Smart Home. Kitchen"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <!-- --------------spiner-backdrop  -------- -->
+      <div class="spiner-backdrop is-hidden" data-load>
+        <div class="js-spinner"></div>
+      </div>
+      <!-- -------------------------------------  -->
     </main>
     <!-- -------------- footer ----------------- -->
     <footer></footer>

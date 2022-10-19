@@ -1,21 +1,53 @@
 import galleryTemplate from '../templates/gallery-item.hbs';
 import { galleryItems } from './gallery-items';
+import refs from './doc-refs.js';
+import { spinerPlay, spinerStop } from './spinner';
 
-const galleryRef = document.querySelector('.gallery');
+const VIDEO_STUB = 'images/gallery/preview/toilet-480.webp';
 
-console.log(galleryRef);
-console.log(galleryItems);
-console.log(galleryTemplate(galleryItems));
+refs.gallery.insertAdjacentHTML('beforeend', galleryTemplate(galleryItems));
+refs.gallery.addEventListener('click', onGalleryClick);
+refs.galleryModalCloseBtn.addEventListener('click', onGalleryModalClose);
+refs.galleryBackdrop.addEventListener('click', onBackdropClick);
 
-galleryRef.insertAdjacentHTML('beforeend', galleryTemplate(galleryItems));
+function onGalleryClick(event) {
+  const videoTitle = event.target.getAttribute('alt');
+  const videoItem = galleryItems.find(element => element.title === videoTitle);
+  refs.modalIframe.src = videoItem.src;
+  spinerPlay();
+}
 
-// import SimpleLightbox from 'simplelightbox';
+function onGalleryModalClose(event) {
+  stopYouTubeVideos();
+  refs.galleryBackdrop.classList.toggle('is-hidden');
+  document.body.classList.toggle('modal-open');
+  document.removeEventListener('keydown', onEscapeKeyDown);
+}
 
-// // Додатковий імпорт стилів
-// import 'simplelightbox/dist/simple-lightbox.min.css';
+function onBackdropClick(event) {
+  if (event.target === refs.galleryBackdrop) {
+    onGalleryModalClose(event);
+  }
+}
 
-// const lightbox = new SimpleLightbox('.gallery a', {
-//   captionsData: 'alt',
-//   captionDelay: 250,
-//   captionClass: 'custom-caption',
-// });
+function onEscapeKeyDown(event) {
+  if (event.code !== 'Escape') {
+    return;
+  }
+  onGalleryModalClose(event);
+}
+
+refs.modalIframe.onload = function () {
+  if (refs.modalIframe.src.endsWith('480.webp')) {
+    return;
+  }
+  spinerStop();
+  refs.galleryBackdrop.classList.toggle('is-hidden');
+  document.body.classList.toggle('modal-open');
+  document.addEventListener('keydown', onEscapeKeyDown);
+};
+
+function stopYouTubeVideos() {
+  // const videoSrc = refs.modalIframe.src;
+  refs.modalIframe.src = VIDEO_STUB;
+}
